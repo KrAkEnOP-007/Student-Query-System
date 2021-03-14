@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="studentView.master.cs" Inherits="Student_Query_System.studentView" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+      
+    <link href="wwroot/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="wwroot/css/bootstrap.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+            font-size:20px;
+        }
+        header{
+            display:flex;
+            text-align:center;
+            background-color:brown;
+            color:cyan;
+            padding:1px;
+            width:100%;
+            min-width:50%;
+            font-size:70px;
+        }
+        nav ul .navBtn{
+            color:coral;
+            padding:4px;
+            font-size:20px;
+            margin:10px;
+        }
+     
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <header ><h1 id="mainHeader" style="font-size:inherit" >Student Query System</h1></header>
+
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="navbar navbar-dark" 
+                Style="margin:0px; padding:10px; display:flex; justify-content:center; width:100%; ">
+                <Items>
+                    <asp:MenuItem Text="Home"></asp:MenuItem>
+                    <asp:MenuItem Text="New Query"></asp:MenuItem>
+                    <asp:MenuItem Text="old Queries"></asp:MenuItem>
+                    <asp:MenuItem Text="About Us"></asp:MenuItem>
+                    <asp:MenuItem Text="Contact Us"></asp:MenuItem>
+                    <asp:MenuItem Text="Login"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+
+        </div>
+
+        <nav class="navbar navbar-dark bg-dark nav text-capitalize text-white " >
+            <ul style="display:flex; list-style:none; color:aliceblue; margin:10px"   >
+                <li class="nav-item"><asp:Button ID= "Btn1" runat="server" Text="Home" cssClass="nav-item btn btn-dark navbar-brand navBtn"  /></li>
+                <li class="nav-item"><asp:Button ID= "Btn2" runat="server" Text="New Query" cssClass="nav-item btn btn-dark navBtn" /></li>
+                <li class="nav-item"><asp:Button ID= "Btn3" runat="server" Text="All Queries" cssClass="nav-item btn btn-dark  navBtn" /></li>
+                <li class="nav-item"><asp:Button ID= "Btn4" runat="server" Text="contact Us" cssClass="nav-item btn btn-dark navBtn" /></li>
+                <li class="nav-item"><asp:Button ID= "Btn5" runat="server" Text="About US" cssClass="nav-item btn btn-dark navBtn" /></li>
+                <li class="nav-item"><asp:Button ID= "Btn6" runat="server" Text="Login"  cssClass="nav-item btn btn-dark navBtn" /></li>
+            </ul>
+        </nav>
+
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
