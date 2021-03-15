@@ -42,18 +42,6 @@
 
             <header ><h1 id="mainHeader" style="font-size:inherit" >Student Query System</h1></header>
 
-            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" CssClass="navbar navbar-dark" 
-                Style="margin:0px; padding:10px; display:flex; justify-content:center; width:100%; ">
-                <Items>
-                    <asp:MenuItem Text="Home"></asp:MenuItem>
-                    <asp:MenuItem Text="New Query"></asp:MenuItem>
-                    <asp:MenuItem Text="old Queries"></asp:MenuItem>
-                    <asp:MenuItem Text="About Us"></asp:MenuItem>
-                    <asp:MenuItem Text="Contact Us"></asp:MenuItem>
-                    <asp:MenuItem Text="Login"></asp:MenuItem>
-                </Items>
-            </asp:Menu>
-
         </div>
 
         <nav class="navbar navbar-dark bg-dark nav text-capitalize text-white " >
