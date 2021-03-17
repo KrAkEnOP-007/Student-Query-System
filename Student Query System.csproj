@@ -105,6 +105,13 @@
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="AllQueres.aspx.cs">
       <DependentUpon>AllQueres.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +179,7 @@
     <Content Include="wwroot\js\bootstrap.esm.min.js.map" />
     <Content Include="wwroot\js\bootstrap.js.map" />
     <Content Include="wwroot\js\bootstrap.min.js.map" />
+    <Content Include="Admin.Master" />
     <None Include="packages.config" />
     <Content Include="studentView.Master" />
     <None Include="Web.Debug.config">
