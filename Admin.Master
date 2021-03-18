@@ -11,10 +11,17 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
-        *{
-                background-color:aliceblue;
+         body{
             margin:0px;
             padding:0px;
+            font-size:20px;
+            background-color:aqua;
+        }
+        nav ul .navBtn {
+            color: coral;
+            padding: 4px;
+            font-size: 20px;
+            margin: 10px;
         }
     </style>
 </head>
@@ -22,15 +29,16 @@
     <form id="form1" runat="server">
 
         <div>
-            <asp:Label style=" align-content:center;text-align:center; background-color:crimson; color:aliceblue; font-size:70px;padding:1px; " Width="1005px" runat="server" ID="MainHeading" Text="Admin Dashboard" Height="81px"></asp:Label>
+            <asp:Label style=" align-content:center;text-align:center; background-color:crimson; color:aliceblue; font-size:70px;padding:1px; " Width="100%" runat="server" ID="MainHeading" Text="Admin Dashboard" Height="100px"></asp:Label>
         </div>
-        <nav class="navbar navbar-dark ">
-            <asp:Button runat="server" ID="home" />
-            <asp:Button runat="server" ID="All queries" />
-            <asp:Button runat="server" ID="Change Password" />
-            <asp:Button runat="server" ID="LogOut" />
+          <nav class="navbar navbar-dark bg-dark nav text-capitalize text-white " >
+            <ul style="display:flex; list-style:none; color:aliceblue; margin:10px"   >
+                <li class="nav-item"><asp:Button ID= "AdminHome" runat="server" Text="Home" cssClass="nav-item btn btn-dark navBtn"  /></li>
+                <li class="nav-item"><asp:Button ID= "Changepasssword" runat="server" Text="Change Password" cssClass="nav-item btn btn-dark navBtn" OnClick="Changepasssword_Click" /></li>
+                <li class="nav-item"><asp:Button ID= "Allqueries" runat="server" Text="All Queries" cssClass="nav-item btn btn-dark  navBtn" /></li>         
+                <li class="nav-item"><asp:Button ID= "LogOut" runat="server" Text="Log-out"  cssClass="nav-item btn btn-dark navBtn" /></li>
+            </ul>
         </nav>
-
 
 
         <div>

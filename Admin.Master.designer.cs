@@ -42,32 +42,32 @@ namespace Student_Query_System
         protected global::System.Web.UI.WebControls.Label MainHeading;
 
         /// <summary>
-        /// home control.
+        /// AdminHome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button home;
+        protected global::System.Web.UI.WebControls.Button AdminHome;
 
         /// <summary>
-        /// All queries control.
+        /// Changepasssword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button All queries;
-        
+        protected global::System.Web.UI.WebControls.Button Changepasssword;
+
         /// <summary>
-        /// Change Password control.
+        /// Allqueries control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Change Password;
-        
+        protected global::System.Web.UI.WebControls.Button Allqueries;
+
         /// <summary>
         /// LogOut control.
         /// </summary>

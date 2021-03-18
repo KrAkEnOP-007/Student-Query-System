@@ -68,7 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
+    <Content Include="AdminHome.aspx" />
     <Content Include="AllQueres.aspx" />
+    <Content Include="AllQueriesAdmin.aspx" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="ContactUs.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Login.aspx" />
@@ -112,12 +115,33 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AllQueres.aspx.cs">
       <DependentUpon>AllQueres.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AllQueres.aspx.designer.cs">
       <DependentUpon>AllQueres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllQueriesAdmin.aspx.cs">
+      <DependentUpon>AllQueriesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllQueriesAdmin.aspx.designer.cs">
+      <DependentUpon>AllQueriesAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>

@@ -37,6 +37,39 @@
         .auto-style1 {
             width: 224px;
         }
+          .loginBox{
+            align-content:center;
+            justify-content:center;
+            background-color:rgba(0, 0, 0, 0.8);
+            box-shadow:8px 8px black;
+            height:500px; 
+            width: 400px;
+            margin:auto;
+            margin-bottom:20px;
+            padding:25px;
+        }
+        #LoginLbl{
+          
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            width: 160px;
+            margin:auto;
+            border:2px solid blue;
+        }
+        .loginLbl{
+            
+            position:relative;
+            color:cyan;
+            font-size:45px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            left:120px;
+        }
+        .BtnLogin{
+            position:relative;
+            width:70px;
+            top:70px;
+            left:30%;
+            
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -48,7 +81,25 @@
     </div>
     
     <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="1">
-        <asp:View ID="StudentLogin" runat="server"></asp:View>
+        <asp:View ID="StudentLogin" runat="server">
+
+
+            <div class="loginBox">
+                <asp:Label runat="server" CssClass="loginLbl" ID="LoginLbl">Login</asp:Label>
+                <div class="form-floating mb-3">
+                    <asp:TextBox runat="server" type="Text" class="form-control bg-dark text-white border-3" ID="userText" placeholder="name@example.com" />
+                    <label class="text-white" for="floatingInput">User Name</label>
+                </div>
+                <div class="form-floating">
+                    <asp:TextBox runat="server" type="password" class="form-control bg-dark text-white border-3" ID="PasswordTxt" placeholder="Password" />
+                    <label class="text-white" for="floatingPassword">Password</label>
+                </div>
+                <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-secondary BtnLogin" Text="Submit" Width="100px" OnClick="LoginBtn_Click" />
+
+
+                <asp:Label ID="ErrorLoginTxt" runat="server" ForeColor="Red"> </asp:Label>
+                </div>
+        </asp:View>
         <asp:View ID="StudentRegister" runat="server">
             <div class="container studReg">
               <table style="width:100%; margin:5px; padding:5px;">
@@ -103,7 +154,28 @@
               </table>
             </div>
         </asp:View>
-        <asp:View ID="AdminLogin" runat="server"></asp:View>
+        <asp:View ID="AdminLogin" runat="server">
+
+
+            
+            <div class="loginBox">
+                <asp:Label runat="server" CssClass="loginLbl" ID="Label1">Login</asp:Label>
+                <div class="form-floating mb-3">
+                    <asp:TextBox runat="server" type="Text" class="form-control bg-dark text-white border-3" ID="TextBox1" placeholder="name@example.com" />
+                    <label class="text-white" for="floatingInput">User Name</label>
+                </div>
+                <div class="form-floating">
+                    <asp:TextBox runat="server" type="password" class="form-control bg-dark text-white border-3" ID="TextBox2" placeholder="Password" />
+                    <label class="text-white" for="floatingPassword">Password</label>
+                </div>
+                <asp:Button runat="server" ID="Button1" CssClass="btn btn-secondary BtnLogin" Text="Submit" Width="100px" OnClick="LoginBtn_Click" />
+
+
+                <asp:Label ID="Label2" runat="server" ForeColor="Red"> </asp:Label>
+                </div>
+
+
+        </asp:View>
 
     </asp:MultiView>
 </asp:Content>
