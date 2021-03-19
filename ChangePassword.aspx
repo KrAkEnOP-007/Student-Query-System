@@ -54,7 +54,10 @@
                <asp:TextBox runat="server" type="password" class="form-control bg-dark text-white border-3" ID="NewPassw2" placeholder="Password"/>
                <label class="text-white" for="floatingPassword">Re Enter Password</label>
            </div>
-       <asp:Button runat="server" ID ="LoginBtn" CssClass="btn btn-danger BtnLogin" Text="Change"  Width="100px" O/>
+       <asp:Button runat="server" ID ="LoginBtn" CssClass="btn btn-danger BtnLogin" Text="Change"  Width="100px"  OnClick="LoginBtn_Click"/>
+       
+      
+            <asp:CompareValidator ID="PasswordValidator" runat="server" ControlToCompare="NewPassw2" ControlToValidate="NewPassw1" ErrorMessage="Password Does Not match*"></asp:CompareValidator>
        
       
    </div>

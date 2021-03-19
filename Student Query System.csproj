@@ -71,6 +71,10 @@
     <Content Include="AdminHome.aspx" />
     <Content Include="AllQueries.aspx" />
     <Content Include="AllQueriesAdmin.aspx" />
+    <Content Include="App_Data\StudentQueryDB.mdf" />
+    <Content Include="App_Data\StudentQueryDB_log.ldf">
+      <DependentUpon>StudentQueryDB.mdf</DependentUpon>
+    </Content>
     <Content Include="ChangePassword.aspx" />
     <Content Include="ContactUs.aspx" />
     <Content Include="HomePage.aspx" />

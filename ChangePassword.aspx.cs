@@ -13,5 +13,10 @@ namespace Student_Query_System
         {
 
         }
+
+        protected void LoginBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -70,6 +70,9 @@
             left:30%;
             
         }
+        .auto-style2 {
+            width: 240px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -89,10 +92,12 @@
                 <div class="form-floating mb-3">
                     <asp:TextBox runat="server" type="Text" class="form-control bg-dark text-white border-3" ID="userText" placeholder="name@example.com" />
                     <label class="text-white" for="floatingInput">User Name</label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter Username*" ControlToValidate="floatingEmail" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </div>
                 <div class="form-floating">
                     <asp:TextBox runat="server" type="password" class="form-control bg-dark text-white border-3" ID="PasswordTxt" placeholder="Password" />
                     <label class="text-white" for="floatingPassword">Password</label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Password*" ControlToValidate="floatingPassword"></asp:RequiredFieldValidator>
                 </div>
                 <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-secondary BtnLogin" Text="Submit" Width="100px" OnClick="LoginBtn_Click" />
 
@@ -111,37 +116,43 @@
                       </tr>
                       <tr>
                           <td class="auto-style1">Name: -</td>
-                          <td>
+                          <td class="auto-style2">
                               <div class="form-floating mb-3">
                                   <asp:TextBox runat="server" type="email" class="form-control" ID="Name" placeholder=""></asp:TextBox>
                                   <label for="Name">Name</label>
                               </div>
                           </td>
-                          <td></td>
+                          <td>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Name" ErrorMessage="Enter Student Name*"></asp:RequiredFieldValidator>
+                          </td>
                       </tr>
                       <tr>
                           <td class="auto-style1">Username:-</td>
-                          <td>
+                          <td class="auto-style2">
                               <div class="form-floating mb-3">
                                   <asp:TextBox runat="server" type="email" class="form-control" id="floatingEmail" placeholder="name@example.com"></asp:TextBox>
                                   <label for="floatingEmail">Email address</label>
                               </div>
                           </td>
-                          <td></td>
+                          <td>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="userText" ErrorMessage="Enter Username*"></asp:RequiredFieldValidator>
+                          </td>
                       </tr>
                       <tr>
                           <td class="auto-style1">Password:-</td>
-                          <td>
+                          <td class="auto-style2">
                               <div class="form-floating">
                                   <asp:TextBox runat="server" type="password" class="form-control" id="floatingPassword" placeholder="Password"></asp:TextBox>
                                   <label for="floatingPassword">Password</label>
                               </div>
                           </td>
-                          <td></td>
+                          <td>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="PasswordTxt" ErrorMessage="Enter Password*"></asp:RequiredFieldValidator>
+                          </td>
                       </tr>
                       <tr>
                           <td class="auto-style1"></td>
-                          <td>&nbsp;</td>
+                          <td class="auto-style2">&nbsp;</td>
                           <td>&nbsp;</td>
                       </tr>
                       <tr>

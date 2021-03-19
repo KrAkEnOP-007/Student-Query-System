@@ -23,6 +23,9 @@
             font-size: 20px;
             margin: 10px;
         }
+        nav{
+            align-items:end;
+        }
     </style>
 </head>
 <body>
