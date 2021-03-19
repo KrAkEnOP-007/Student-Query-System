@@ -18,5 +18,20 @@ namespace Student_Query_System
         {
             Response.Redirect("ChangePassword.aspx");
         }
+
+        protected void Allqueries_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AllQueriesAdmin.aspx");
+        }
+
+        protected void AdminHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminHome.aspx");
+        }
+
+        protected void LogOut_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

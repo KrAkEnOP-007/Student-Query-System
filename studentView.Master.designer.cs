@@ -33,58 +33,58 @@ namespace Student_Query_System
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Btn1 control.
+        /// Homebtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn1;
+        protected global::System.Web.UI.WebControls.Button Homebtn;
 
         /// <summary>
-        /// Btn2 control.
+        /// NewQueryBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn2;
+        protected global::System.Web.UI.WebControls.Button NewQueryBtn;
 
         /// <summary>
-        /// Btn3 control.
+        /// AllQueriesbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn3;
+        protected global::System.Web.UI.WebControls.Button AllQueriesbtn;
 
         /// <summary>
-        /// Btn4 control.
+        /// ContactUsBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn4;
+        protected global::System.Web.UI.WebControls.Button ContactUsBtn;
 
         /// <summary>
-        /// Btn5 control.
+        /// AboutUsBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn5;
+        protected global::System.Web.UI.WebControls.Button AboutUsBtn;
 
         /// <summary>
-        /// Btn6 control.
+        /// LoginBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn6;
+        protected global::System.Web.UI.WebControls.Button LoginBtn;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

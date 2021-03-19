@@ -48,12 +48,12 @@
 
         <nav class="navbar navbar-dark bg-dark nav text-capitalize text-white " >
             <ul style="display:flex; list-style:none; color:aliceblue; margin:10px"   >
-                <li class="nav-item"><asp:Button ID= "Btn1" runat="server" Text="Home" cssClass="nav-item btn btn-dark navbar-brand navBtn"  /></li>
-                <li class="nav-item"><asp:Button ID= "Btn2" runat="server" Text="New Query" cssClass="nav-item btn btn-dark navBtn" /></li>
-                <li class="nav-item"><asp:Button ID= "Btn3" runat="server" Text="All Queries" cssClass="nav-item btn btn-dark  navBtn" /></li>
-                <li class="nav-item"><asp:Button ID= "Btn4" runat="server" Text="contact Us" cssClass="nav-item btn btn-dark navBtn" /></li>
-                <li class="nav-item"><asp:Button ID= "Btn5" runat="server" Text="About US" cssClass="nav-item btn btn-dark navBtn" /></li>
-                <li class="nav-item"><asp:Button ID= "Btn6" runat="server" Text="Login"  cssClass="nav-item btn btn-dark navBtn" /></li>
+                <li class="nav-item"><asp:Button ID= "Homebtn" runat="server" Text="Home" cssClass="nav-item btn btn-dark navbar-brand navBtn"  /></li>
+                <li class="nav-item"><asp:Button ID= "NewQueryBtn" runat="server" Text="New Query" cssClass="nav-item btn btn-dark navBtn" OnClick="NewQueryBtn_Click"  /></li>
+                <li class="nav-item"><asp:Button ID= "AllQueriesbtn" runat="server" Text="All Queries" cssClass="nav-item btn btn-dark  navBtn" OnClick="AllQueriesbtn_Click"  /></li>
+                <li class="nav-item"><asp:Button ID= "ContactUsBtn" runat="server" Text="contact Us" cssClass="nav-item btn btn-dark navBtn" OnClick="ContactUsBtn_Click"  /></li>
+                <li class="nav-item"><asp:Button ID= "AboutUsBtn" runat="server" Text="About US" cssClass="nav-item btn btn-dark navBtn" OnClick="AboutUsBtn_Click"  /></li>
+                <li class="nav-item"><asp:Button ID= "LoginBtn" runat="server" Text="Login"  cssClass="nav-item btn btn-dark navBtn" OnClick="LoginBtn_Click"  /></li>
             </ul>
         </nav>
 

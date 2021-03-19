@@ -75,9 +75,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <div class="loginNav">
-        <asp:Button runat="server" class="Navbuttons" ID="StudentloginBtn" Text="Student Login"  />
-        <asp:Button runat="server" class="Navbuttons" ID="StudentRegisterBtn" Text="Register Student" />
-        <asp:Button runat="server" class="Navbuttons" ID="AdminLoginbtn" Text="Admin Login" />
+        <asp:Button runat="server" class="Navbuttons" ID="StudentloginBtn" Text="Student Login" OnClick="StudentloginBtn_Click"  />
+        <asp:Button runat="server" class="Navbuttons" ID="StudentRegisterBtn" Text="Register Student" OnClick="StudentRegisterBtn_Click" />
+        <asp:Button runat="server" class="Navbuttons" ID="AdminLoginbtn" Text="Admin Login" OnClick="AdminLoginbtn_Click" />
     </div>
     
     <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="1">
@@ -153,28 +153,6 @@
                   </tbody>
               </table>
             </div>
-        </asp:View>
-        <asp:View ID="AdminLogin" runat="server">
-
-
-            
-            <div class="loginBox">
-                <asp:Label runat="server" CssClass="loginLbl" ID="Label1">Login</asp:Label>
-                <div class="form-floating mb-3">
-                    <asp:TextBox runat="server" type="Text" class="form-control bg-dark text-white border-3" ID="TextBox1" placeholder="name@example.com" />
-                    <label class="text-white" for="floatingInput">User Name</label>
-                </div>
-                <div class="form-floating">
-                    <asp:TextBox runat="server" type="password" class="form-control bg-dark text-white border-3" ID="TextBox2" placeholder="Password" />
-                    <label class="text-white" for="floatingPassword">Password</label>
-                </div>
-                <asp:Button runat="server" ID="Button1" CssClass="btn btn-secondary BtnLogin" Text="Submit" Width="100px" OnClick="LoginBtn_Click" />
-
-
-                <asp:Label ID="Label2" runat="server" ForeColor="Red"> </asp:Label>
-                </div>
-
-
         </asp:View>
 
     </asp:MultiView>

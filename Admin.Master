@@ -33,10 +33,10 @@
         </div>
           <nav class="navbar navbar-dark bg-dark nav text-capitalize text-white " >
             <ul style="display:flex; list-style:none; color:aliceblue; margin:10px"   >
-                <li class="nav-item"><asp:Button ID= "AdminHome" runat="server" Text="Home" cssClass="nav-item btn btn-dark navBtn"  /></li>
+                <li class="nav-item"><asp:Button ID= "AdminHome" runat="server" Text="Home" cssClass="nav-item btn btn-dark navBtn" OnClick="AdminHome_Click"  /></li>
                 <li class="nav-item"><asp:Button ID= "Changepasssword" runat="server" Text="Change Password" cssClass="nav-item btn btn-dark navBtn" OnClick="Changepasssword_Click" /></li>
-                <li class="nav-item"><asp:Button ID= "Allqueries" runat="server" Text="All Queries" cssClass="nav-item btn btn-dark  navBtn" /></li>         
-                <li class="nav-item"><asp:Button ID= "LogOut" runat="server" Text="Log-out"  cssClass="nav-item btn btn-dark navBtn" /></li>
+                <li class="nav-item"><asp:Button ID= "Allqueries" runat="server" Text="All Queries" cssClass="nav-item btn btn-dark  navBtn" OnClick="Allqueries_Click" /></li>         
+                <li class="nav-item"><asp:Button ID= "LogOut" runat="server" Text="Log-out"  cssClass="nav-item btn btn-dark navBtn" OnClick="LogOut_Click" /></li>
             </ul>
         </nav>
 

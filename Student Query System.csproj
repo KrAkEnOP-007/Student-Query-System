@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="AdminHome.aspx" />
-    <Content Include="AllQueres.aspx" />
+    <Content Include="AllQueries.aspx" />
     <Content Include="AllQueriesAdmin.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="ContactUs.aspx" />
@@ -122,12 +122,12 @@
     <Compile Include="AdminHome.aspx.designer.cs">
       <DependentUpon>AdminHome.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllQueres.aspx.cs">
-      <DependentUpon>AllQueres.aspx</DependentUpon>
+    <Compile Include="AllQueries.aspx.cs">
+      <DependentUpon>AllQueries.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllQueres.aspx.designer.cs">
-      <DependentUpon>AllQueres.aspx</DependentUpon>
+    <Compile Include="AllQueries.aspx.designer.cs">
+      <DependentUpon>AllQueries.aspx</DependentUpon>
     </Compile>
     <Compile Include="AllQueriesAdmin.aspx.cs">
       <DependentUpon>AllQueriesAdmin.aspx</DependentUpon>

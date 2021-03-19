@@ -14,9 +14,9 @@
         .mainLbl{
             border: 2px;
             border-radius:8px;
-            margin-left:20%;
+            margin-left:25%;
             margin-top:50px;
-            padding:20px;
+            padding:5px;
             background-color:darkgreen;
             color:azure;
         }
@@ -32,7 +32,7 @@
                 <label for="floatingTextarea2">Your Query</label>
             </div>
             <br />
-            <asp:Button runat="server" ID="SubmitBtn" CssClass="btn btn-primary" Text="Submit Query" />
+            <asp:Button runat="server" ID="SubmitBtn" CssClass="btn btn-primary" Text="Submit Query" OnClick="SubmitBtn_Click" />
         </div>
     </div>
 </asp:Content>
