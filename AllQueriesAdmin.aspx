@@ -11,6 +11,7 @@
        }
         .auto-style1 {
             width: 100%;
+            background-color:lavender;
         }
         .auto-style2 {
             width: 214px;

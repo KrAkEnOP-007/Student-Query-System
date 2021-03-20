@@ -76,14 +76,16 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
     <div class="loginNav">
-        <asp:Button runat="server" class="Navbuttons" ID="StudentloginBtn" Text="Student Login" OnClick="StudentloginBtn_Click"  />
+        <Button  class="Navbuttons" ID="StudentloginBtn"  OnClick="StudentloginBtn_Click" >Student Login</Button>
         <asp:Button runat="server" class="Navbuttons" ID="StudentRegisterBtn" Text="Register Student" OnClick="StudentRegisterBtn_Click" />
-        <asp:Button runat="server" class="Navbuttons" ID="AdminLoginbtn" Text="Admin Login" OnClick="AdminLoginbtn_Click" />
+        <Button  class="Navbuttons" ID="AdminLoginbtn"  OnClick="AdminLoginbtn_Click" >Admin Login</Button>
     </div>
     
-    <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="1">
+    <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
         <asp:View ID="StudentLogin" runat="server">
 
 
@@ -167,4 +169,6 @@
         </asp:View>
 
     </asp:MultiView>
+            </ContentTemplate>
+        </asp:UpdatePanel>
 </asp:Content>

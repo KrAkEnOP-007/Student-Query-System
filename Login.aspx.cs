@@ -22,7 +22,10 @@ namespace Student_Query_System
 
         protected void StudentloginBtn_Click(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 0;
+            if (MultiView1.ActiveViewIndex != 0)
+            {
+                MultiView1.ActiveViewIndex = 0;
+            }
             login = "Student";
         }
 
@@ -33,8 +36,12 @@ namespace Student_Query_System
 
         protected void AdminLoginbtn_Click(object sender, EventArgs e)
         {
-            MultiView1.ActiveViewIndex = 0;
+            if (MultiView1.ActiveViewIndex != 0)
+            {
+                MultiView1.ActiveViewIndex = 0;
+            }
             login = "Admin";
+
         }
     }
 }
