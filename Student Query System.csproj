@@ -80,6 +80,7 @@
     <Content Include="HomePage.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="NewQuery.aspx" />
+    <Content Include="StudentRegister.aspx" />
     <Content Include="wwroot\css\bootstrap-grid.css" />
     <Content Include="wwroot\css\bootstrap-grid.min.css" />
     <Content Include="wwroot\css\bootstrap-grid.rtl.css" />
@@ -176,6 +177,13 @@
       <DependentUpon>NewQuery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentRegister.aspx.cs">
+      <DependentUpon>StudentRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentRegister.aspx.designer.cs">
+      <DependentUpon>StudentRegister.aspx</DependentUpon>
+    </Compile>
     <Compile Include="studentView.Master.cs">
       <DependentUpon>studentView.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

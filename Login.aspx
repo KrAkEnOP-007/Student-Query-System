@@ -25,15 +25,7 @@
             color:cadetblue;
             transition:all ease-in-out 0.7s;
         }
-        .studReg{
-            background-color:gray;
-            width:80%;
-            margin:auto;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            flex-direction:column;
-        }
+      
         .auto-style1 {
             width: 224px;
         }
@@ -76,99 +68,30 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
+   
     <div class="loginNav">
         <Button  class="Navbuttons" ID="StudentloginBtn"  OnClick="StudentloginBtn_Click" >Student Login</Button>
         <asp:Button runat="server" class="Navbuttons" ID="StudentRegisterBtn" Text="Register Student" OnClick="StudentRegisterBtn_Click" />
         <Button  class="Navbuttons" ID="AdminLoginbtn"  OnClick="AdminLoginbtn_Click" >Admin Login</Button>
     </div>
-    
-    <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
-        <asp:View ID="StudentLogin" runat="server">
-
 
             <div class="loginBox">
                 <asp:Label runat="server" CssClass="loginLbl" ID="LoginLbl">Login</asp:Label>
                 <div class="form-floating mb-3">
                     <asp:TextBox runat="server" type="Text" class="form-control bg-dark text-white border-3" ID="userText" placeholder="name@example.com" />
                     <label class="text-white" for="floatingInput">User Name</label>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter Username*" ControlToValidate="floatingEmail" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter Username*" ControlToValidate="userText" SetFocusOnError="True"></asp:RequiredFieldValidator>
                 </div>
                 <div class="form-floating">
                     <asp:TextBox runat="server" type="password" class="form-control bg-dark text-white border-3" ID="PasswordTxt" placeholder="Password" />
                     <label class="text-white" for="floatingPassword">Password</label>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Password*" ControlToValidate="floatingPassword"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Password*" ControlToValidate="PasswordTxt"></asp:RequiredFieldValidator>
                 </div>
                 <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-secondary BtnLogin" Text="Submit" Width="100px" OnClick="LoginBtn_Click" />
 
 
                 <asp:Label ID="ErrorLoginTxt" runat="server" ForeColor="Red"> </asp:Label>
                 </div>
-        </asp:View>
-        <asp:View ID="StudentRegister" runat="server">
-            <div class="container studReg">
-              <table style="width:100%; margin:5px; padding:5px;">
-                  
-                  <tbody>
-                      <tr>
-                          <td colspan="3"><h1>Student Registration</h1></td>
-                         
-                      </tr>
-                      <tr>
-                          <td class="auto-style1">Name: -</td>
-                          <td class="auto-style2">
-                              <div class="form-floating mb-3">
-                                  <asp:TextBox runat="server" type="email" class="form-control" ID="Name" placeholder=""></asp:TextBox>
-                                  <label for="Name">Name</label>
-                              </div>
-                          </td>
-                          <td>
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="Name" ErrorMessage="Enter Student Name*"></asp:RequiredFieldValidator>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td class="auto-style1">Username:-</td>
-                          <td class="auto-style2">
-                              <div class="form-floating mb-3">
-                                  <asp:TextBox runat="server" type="email" class="form-control" id="floatingEmail" placeholder="name@example.com"></asp:TextBox>
-                                  <label for="floatingEmail">Email address</label>
-                              </div>
-                          </td>
-                          <td>
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="userText" ErrorMessage="Enter Username*"></asp:RequiredFieldValidator>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td class="auto-style1">Password:-</td>
-                          <td class="auto-style2">
-                              <div class="form-floating">
-                                  <asp:TextBox runat="server" type="password" class="form-control" id="floatingPassword" placeholder="Password"></asp:TextBox>
-                                  <label for="floatingPassword">Password</label>
-                              </div>
-                          </td>
-                          <td>
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="PasswordTxt" ErrorMessage="Enter Password*"></asp:RequiredFieldValidator>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td class="auto-style1"></td>
-                          <td class="auto-style2">&nbsp;</td>
-                          <td>&nbsp;</td>
-                      </tr>
-                      <tr>
-                          <td colspan="3" style="display:flex; justify-content:center;">
-                              <asp:Button runat="server" ID="Signupbtn" Text="Sign Up" CssClass="btn btn-primary"/>
-                          </td>
-                      </tr>
-
-                  </tbody>
-              </table>
-            </div>
-        </asp:View>
-
-    </asp:MultiView>
-            </ContentTemplate>
-        </asp:UpdatePanel>
+   
+        
 </asp:Content>
