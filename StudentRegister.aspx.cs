@@ -26,8 +26,8 @@ namespace Student_Query_System
             }
 
             int newid = getNewId();
-
-            SqlCommand cmd = new SqlCommand("insert into StudentMaster values('"+newid+"', '"+Name.ToString()+"','"+floatingEmail.ToString()+"','"+floatingPassword.ToString()+"') ",conn);
+            newid += 1;
+            SqlCommand cmd = new SqlCommand("insert into StudentMaster values('"+newid+"', '"+Name.Text.ToString()+"','"+floatingEmail.Text.ToString()+"','"+floatingPassword.Text.ToString()+"') ",conn);
             conn.Open();
             int i =cmd.ExecuteNonQuery();
             conn.Close();
@@ -45,18 +45,24 @@ namespace Student_Query_System
 
         private bool CheckIsValid()
         {
-            SqlCommand cmd = new SqlCommand("select UserName from StudentMaster where UserName ='"+floatingEmail.ToString()+"' ");
+            SqlCommand cmd = new SqlCommand("select UserName from StudentMaster where UserName ='"+floatingEmail.ToString()+"' ",conn);
             conn.Open();
             SqlDataReader dr = cmd.ExecuteReader();
-            conn.Close();
-            if (dr.Read()) { return true; }
-            else { return false; }
+            
+            if (dr.Read()) 
+            {
+                conn.Close();
+                return true; 
+            }
+            else {
+                conn.Close();
+                return false; }
             
         }
 
         private int getNewId()
         {
-            SqlCommand cmd = new SqlCommand("select MAX(StdId) from StudentMaster ");
+            SqlCommand cmd = new SqlCommand("select MAX(StdId) from StudentMaster ",conn);
             conn.Open();
             int id = int.Parse(cmd.ExecuteScalar().ToString());
             conn.Close();

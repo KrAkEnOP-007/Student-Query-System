@@ -33,58 +33,67 @@ namespace Student_Query_System
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Homebtn control.
+        /// Home control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Homebtn;
+        protected global::System.Web.UI.WebControls.HyperLink Home;
 
         /// <summary>
-        /// NewQueryBtn control.
+        /// NewQuery control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button NewQueryBtn;
+        protected global::System.Web.UI.WebControls.HyperLink NewQuery;
 
         /// <summary>
-        /// AllQueriesbtn control.
+        /// AllQueries control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AllQueriesbtn;
+        protected global::System.Web.UI.WebControls.HyperLink AllQueries;
 
         /// <summary>
-        /// ContactUsBtn control.
+        /// ContactUs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ContactUsBtn;
+        protected global::System.Web.UI.WebControls.HyperLink ContactUs;
 
         /// <summary>
-        /// AboutUsBtn control.
+        /// AboutUs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AboutUsBtn;
+        protected global::System.Web.UI.WebControls.HyperLink AboutUs;
 
         /// <summary>
-        /// LoginBtn control.
+        /// Login control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginBtn;
+        protected global::System.Web.UI.WebControls.HyperLink Login;
+
+        /// <summary>
+        /// LogOutBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LogOutBtn;
 
         /// <summary>
         /// ContentPlaceHolder1 control.

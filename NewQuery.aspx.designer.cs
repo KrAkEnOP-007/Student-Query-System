@@ -24,13 +24,13 @@ namespace Student_Query_System
         protected global::System.Web.UI.WebControls.Label mainLbl;
 
         /// <summary>
-        /// floatingTextarea2 control.
+        /// QueryDataTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox floatingTextarea2;
+        protected global::System.Web.UI.WebControls.TextBox QueryDataTxt;
 
         /// <summary>
         /// SubmitBtn control.

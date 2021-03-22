@@ -28,7 +28,7 @@
             <asp:Label  runat="server" CssClass="mainLbl" ID="mainLbl" Text="Enter Your Query"></asp:Label><br />
             <br />
             <div class="form-floating">
-                <asp:TextBox runat="server" TextMode="MultiLine" class="form-control bg-dark text-white" Rows="5" MaxLength="200" placeholder="Leave a comment here" id="floatingTextarea2" Height="136px"></asp:TextBox>
+                <asp:TextBox runat="server" TextMode="MultiLine" class="form-control bg-dark text-white" Rows="5" MaxLength="200" placeholder="Leave a comment here" id="QueryDataTxt" Height="136px"></asp:TextBox>
                 <label for="floatingTextarea2">Your Query</label>
             </div>
             <br />

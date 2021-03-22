@@ -9,34 +9,29 @@ namespace Student_Query_System
 {
     public partial class studentView : System.Web.UI.MasterPage
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            if( Session["username"] == null || Session["username"].ToString() == "")
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if (Session["username"].ToString() =="Login")
+            {
 
+            }
+            else
+            {
+                Login.Visible = false;
+                LogOutBtn.Visible = true;
+
+            }
         }
 
-        protected void LoginBtn_Click(object sender, EventArgs e)
+        protected void LogOutBtn_Click(object sender, EventArgs e)
         {
+            Session["username"] = "";
             Response.Redirect("Login.aspx");
-        }
-
-        protected void AboutUsBtn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AboutUs.aspx");
-        }
-
-        protected void ContactUsBtn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ContactUs.aspx");
-        }
-
-        protected void NewQueryBtn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("NewQuery.aspx");
-        }
-
-        protected void AllQueriesbtn_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AllQueries.aspx");
         }
     }
 }

@@ -71,7 +71,7 @@
    
     <div class="loginNav">
         <Button  class="Navbuttons" ID="StudentloginBtn"  OnClick="StudentloginBtn_Click" >Student Login</Button>
-        <asp:Button runat="server" class="Navbuttons" ID="StudentRegisterBtn" Text="Register Student" OnClick="StudentRegisterBtn_Click" />
+        <asp:HyperLink runat="server" class="Navbuttons" ID="StudentRegister" NavigateUrl="~/StudentRegister.aspx" Text="Register Student"  />
         <Button  class="Navbuttons" ID="AdminLoginbtn"  OnClick="AdminLoginbtn_Click" >Admin Login</Button>
     </div>
 
@@ -90,7 +90,7 @@
                 <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-secondary BtnLogin" Text="Submit" Width="100px" OnClick="LoginBtn_Click" />
 
 
-                <asp:Label ID="ErrorLoginTxt" runat="server" ForeColor="Red"> </asp:Label>
+                <asp:Label ID="ErrorLoginTxt" runat="server" ForeColor="White"></asp:Label>
                 </div>
    
         

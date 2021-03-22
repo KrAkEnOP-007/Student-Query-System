@@ -48,12 +48,13 @@
 
         <nav class="navbar navbar-dark bg-dark nav text-capitalize text-white " >
             <ul style="display:flex; list-style:none; color:aliceblue; margin:10px"   >
-                <li class="nav-item"><asp:Button ID= "Homebtn" runat="server" Text="Home" cssClass="nav-item btn btn-dark navbar-brand navBtn"  /></li>
-                <li class="nav-item"><asp:Button ID= "NewQueryBtn" runat="server" Text="New Query" cssClass="nav-item btn btn-dark navBtn" OnClick="NewQueryBtn_Click"  /></li>
-                <li class="nav-item"><asp:Button ID= "AllQueriesbtn" runat="server" Text="All Queries" cssClass="nav-item btn btn-dark  navBtn" OnClick="AllQueriesbtn_Click"  /></li>
-                <li class="nav-item"><asp:Button ID= "ContactUsBtn" runat="server" Text="contact Us" cssClass="nav-item btn btn-dark navBtn" OnClick="ContactUsBtn_Click"  /></li>
-                <li class="nav-item"><asp:Button ID= "AboutUsBtn" runat="server" Text="About US" cssClass="nav-item btn btn-dark navBtn" OnClick="AboutUsBtn_Click"  /></li>
-                <li class="nav-item"><asp:Button ID= "LoginBtn" runat="server" Text="Login"  cssClass="nav-item btn btn-dark navBtn" OnClick="LoginBtn_Click"  /></li>
+                <li class="nav-item"><asp:HyperLink ID="Home" runat="server" Text="Home" cssClass="nav-item btn btn-dark navbar-brand navBtn" NavigateUrl="~/HomePage.aspx"  /></li>
+                <li class="nav-item"><asp:HyperLink ID= "NewQuery" runat="server" Text="New Query" cssClass="nav-item btn btn-dark navBtn" OnClick="NewQueryBtn_Click" NavigateUrl="~/NewQuery.aspx"  /></li>
+                <li class="nav-item"><asp:HyperLink ID= "AllQueries" runat="server" Text="All Queries" cssClass="nav-item btn btn-dark  navBtn" OnClick="AllQueriesbtn_Click" NavigateUrl="~/AllQueries.aspx"  /></li>
+                <li class="nav-item"><asp:HyperLink ID= "ContactUs" runat="server" Text="contact Us" cssClass="nav-item btn btn-dark navBtn" OnClick="ContactUsBtn_Click" NavigateUrl="~/ContactUs.aspx" /></li>
+                <li class="nav-item"><asp:HyperLink ID= "AboutUs" runat="server" Text="About US" cssClass="nav-item btn btn-dark navBtn" OnClick="AboutUsBtn_Click" NavigateUrl="~/AboutUs.aspx" /></li>
+                <li class="nav-item"><asp:HyperLink ID= "Login" runat="server" Text="Login"  cssClass="nav-item btn btn-dark navBtn" OnClick="LoginBtn_Click" NavigateUrl="~/Login.aspx" /></li>
+                <li class="nav-item"><asp:Button runat="server" ID="LogOutBtn" CssClass ="nav-item btn btn-dark navBtn" style="float:right;" Text="LOG-OUT" OnClick="LogOutBtn_Click" Visible="False" /></li>
             </ul>
         </nav>
 
