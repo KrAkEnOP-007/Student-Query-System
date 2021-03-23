@@ -15,6 +15,15 @@ namespace Student_Query_System
     {
 
         /// <summary>
+        /// StudentloginBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button StudentloginBtn;
+
+        /// <summary>
         /// StudentRegister control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace Student_Query_System
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink StudentRegister;
+
+        /// <summary>
+        /// AdminLoginbtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AdminLoginbtn;
 
         /// <summary>
         /// LoginLbl control.
@@ -42,15 +60,6 @@ namespace Student_Query_System
         protected global::System.Web.UI.WebControls.TextBox userText;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-
-        /// <summary>
         /// PasswordTxt control.
         /// </summary>
         /// <remarks>
@@ -60,13 +69,13 @@ namespace Student_Query_System
         protected global::System.Web.UI.WebControls.TextBox PasswordTxt;
 
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// ErrorLoginTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.Label ErrorLoginTxt;
 
         /// <summary>
         /// LoginBtn control.
@@ -76,14 +85,5 @@ namespace Student_Query_System
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button LoginBtn;
-
-        /// <summary>
-        /// ErrorLoginTxt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorLoginTxt;
     }
 }

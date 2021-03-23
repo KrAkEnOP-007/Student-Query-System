@@ -11,7 +11,14 @@ namespace Student_Query_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["username"] == null || Session["username"].ToString() != "Admin")
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
 
+            }
         }
 
         protected void Changepasssword_Click(object sender, EventArgs e)

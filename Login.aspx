@@ -26,9 +26,6 @@
             transition:all ease-in-out 0.7s;
         }
       
-        .auto-style1 {
-            width: 224px;
-        }
           .loginBox{
             align-content:center;
             justify-content:center;
@@ -51,9 +48,9 @@
             
             position:relative;
             color:cyan;
-            font-size:45px;
+            font-size:30px;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            left:120px;
+            left:100px;
         }
         .BtnLogin{
             position:relative;
@@ -62,17 +59,14 @@
             left:30%;
             
         }
-        .auto-style2 {
-            width: 240px;
-        }
-    </style>
+        </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
     <div class="loginNav">
-        <Button  class="Navbuttons" ID="StudentloginBtn"  OnClick="StudentloginBtn_Click" >Student Login</Button>
+        <asp:Button runat="server"  class="Navbuttons" ID="StudentloginBtn"  OnClick="StudentloginBtn_Click" Text="Student Login" />
         <asp:HyperLink runat="server" class="Navbuttons" ID="StudentRegister" NavigateUrl="~/StudentRegister.aspx" Text="Register Student"  />
-        <Button  class="Navbuttons" ID="AdminLoginbtn"  OnClick="AdminLoginbtn_Click" >Admin Login</Button>
+        <asp:Button runat="server" class="Navbuttons" ID="AdminLoginbtn"  OnClick="AdminLoginbtn_Click" text="Admin Login" />
     </div>
 
             <div class="loginBox">
@@ -80,18 +74,18 @@
                 <div class="form-floating mb-3">
                     <asp:TextBox runat="server" type="Text" class="form-control bg-dark text-white border-3" ID="userText" placeholder="name@example.com" />
                     <label class="text-white" for="floatingInput">User Name</label>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please Enter Username*" ControlToValidate="userText" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                </div>
+
+                    </div>
                 <div class="form-floating">
                     <asp:TextBox runat="server" type="password" class="form-control bg-dark text-white border-3" ID="PasswordTxt" placeholder="Password" />
                     <label class="text-white" for="floatingPassword">Password</label>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Password*" ControlToValidate="PasswordTxt"></asp:RequiredFieldValidator>
-                </div>
+                    </div>
+                <asp:Label ID="ErrorLoginTxt" runat="server" ForeColor="White"></asp:Label>
                 <asp:Button runat="server" ID="LoginBtn" CssClass="btn btn-secondary BtnLogin" Text="Submit" Width="100px" OnClick="LoginBtn_Click" />
 
 
-                <asp:Label ID="ErrorLoginTxt" runat="server" ForeColor="White"></asp:Label>
-                </div>
+                
+             </div>
    
         
 </asp:Content>

@@ -29,7 +29,7 @@ namespace Student_Query_System
                 {
                     int newId = getNewId();
                     newId += 1;
-                    SqlCommand cmd = new SqlCommand("insert into AllQueries values('" + newId + "','" + QueryDataTxt.Text.ToString() + "', '' ,'N' , '" + Session["username"].ToString() + "') ", conn);
+                    SqlCommand cmd = new SqlCommand("insert into AllQueries values('" + newId + "','" + QueryDataTxt.Text.ToString() + "', 'Not Answered' ,'N' , '" + Session["username"].ToString() + "') ", conn);
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();

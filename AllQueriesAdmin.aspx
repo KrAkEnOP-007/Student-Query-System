@@ -9,114 +9,100 @@
            justify-content:center;
            align-items:center;
        }
-        .auto-style1 {
+        .auto-style4 {
             width: 100%;
-            background-color:lavender;
-        }
-        .auto-style2 {
-            width: 214px;
-        }
-        .auto-style3 {
-            display: block;
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #212529;
-            background-clip: padding-box;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border-radius: 0.25rem;
-            transition: none;
-            border: 1px solid #ced4da;
-            background-color: #fff;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="AllQueriesA">
         <asp:Label ID="MainLbl" runat="server" Text="All Queries"></asp:Label><br />
-        <asp:FormView ID="FormView1" runat="server" DataSourceID="SqlDataSource1" Height="346px" Width="655px" AllowPaging="True" DataKeyNames="QueryId">
+        <asp:FormView ID="FormView1" runat="server" DataSourceID="SqlDataSource1" Height="346px" Width="655px" AllowPaging="True" DataKeyNames="QueryId" BackColor="White" BorderColor="#336666" BorderStyle="Double" BorderWidth="3px" CellPadding="4" GridLines="Horizontal" DefaultMode="Edit">
             <EditItemTemplate>
-                QueryId:
-                <asp:DynamicControl ID="QueryIdDynamicControl" runat="server" DataField="QueryId" Mode="ReadOnly" />
-                <br />
-                QueryData:
-                <asp:DynamicControl ID="QueryDataDynamicControl" runat="server" DataField="QueryData" Mode="Edit" />
-                <br />
-                QueryAnswer:
-                <asp:DynamicControl ID="QueryAnswerDynamicControl" runat="server" DataField="QueryAnswer" Mode="Edit" />
-                <br />
-                QueryAnswered:
-                <asp:DynamicControl ID="QueryAnsweredDynamicControl" runat="server" DataField="QueryAnswered" Mode="Edit" />
-                <br />
-                QueryBy:
-                <asp:DynamicControl ID="QueryByDynamicControl" runat="server" DataField="QueryBy" Mode="Edit" />
-                <br />
-                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" ValidationGroup="Insert" />
-                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-            </EditItemTemplate>
-            <InsertItemTemplate>
-                QueryId:
-                <asp:DynamicControl ID="QueryIdDynamicControl" runat="server" DataField="QueryId" Mode="Insert" ValidationGroup="Insert" />
-                <br />
-                QueryData:
-                <asp:DynamicControl ID="QueryDataDynamicControl" runat="server" DataField="QueryData" Mode="Insert" ValidationGroup="Insert" />
-                <br />
-                QueryAnswer:
-                <asp:DynamicControl ID="QueryAnswerDynamicControl" runat="server" DataField="QueryAnswer" Mode="Insert" ValidationGroup="Insert" />
-                <br />
-                QueryAnswered:
-                <asp:DynamicControl ID="QueryAnsweredDynamicControl" runat="server" DataField="QueryAnswered" Mode="Insert" ValidationGroup="Insert" />
-                <br />
-                QueryBy:
-                <asp:DynamicControl ID="QueryByDynamicControl" runat="server" DataField="QueryBy" Mode="Insert" ValidationGroup="Insert" />
-                <br />
-                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" ValidationGroup="Insert" />
-                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-            </InsertItemTemplate>
-            <ItemTemplate>
-                <table cellpadding="2" class="auto-style1">
+                <table class="auto-style4">
                     <tr>
-                        <td class="auto-style2">&nbsp;</td>
+                        <td>&nbsp;</td>
                         <td>&nbsp;</td>
                     </tr>
                     <tr>
-                        <td class="auto-style2">Query Id</td>
+                        <td>Query Id:</td>
                         <td>
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style3" Text='<%# Bind("QueryId") %>' Width="89px"></asp:TextBox>
+                            <asp:Label ID="QueryIdLabel1" runat="server" Text='<%# Eval("QueryId") %>' />
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style2">Query data</td>
+                        <td>Query Data:</td>
                         <td>
-                            <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" Text='<%# Bind("QueryData") %>' TextMode="MultiLine"></asp:TextBox>
+                            <asp:TextBox ID="QueryDataTextBox" runat="server" Text='<%# Bind("QueryData") %>' TextMode="MultiLine" />
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style2">Query Answer</td>
+                        <td>Query Answer:</td>
                         <td>
-                            <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control" Text='<%# Bind("QueryAnswer") %>' TextMode="MultiLine"></asp:TextBox>
+                            <asp:TextBox ID="QueryAnswerTextBox" runat="server" Text='<%# Bind("QueryAnswer") %>' TextMode="MultiLine" />
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style2">Query Answered?</td>
+                        <td>Query Answered:</td>
                         <td>
-                            <asp:TextBox ID="TextBox4" runat="server" CssClass="form-control" Text='<%# Bind("QueryAnswered") %>' Width="75px"></asp:TextBox>
+                            <asp:TextBox ID="QueryAnsweredTextBox" runat="server" Text='<%# Bind("QueryAnswered") %>' MaxLength="1" />
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style2">Query By</td>
+                        <td>Query By:</td>
                         <td>
-                            <asp:TextBox ID="TextBox5" runat="server" CssClass="form-control" Text='<%# Bind("QueryBy") %>' Width="123px"></asp:TextBox>
+                            <asp:TextBox ID="QueryByTextBox" runat="server" Text='<%# Bind("QueryBy") %>' Enabled="False" />
                         </td>
                     </tr>
                 </table>
                 <br />
+                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            </EditItemTemplate>
+            <EditRowStyle BackColor="#339966" Font-Bold="True" ForeColor="White" />
+            <FooterStyle BackColor="White" ForeColor="#333333" />
+            <HeaderStyle BackColor="#336666" Font-Bold="True" ForeColor="White" />
+            <InsertItemTemplate>
+                QueryId:
+                <asp:TextBox ID="QueryIdTextBox" runat="server" Text='<%# Bind("QueryId") %>' />
+                <br />
+                QueryData:
+                <asp:TextBox ID="QueryDataTextBox" runat="server" Text='<%# Bind("QueryData") %>' />
+                <br />
+                QueryAnswer:
+                <asp:TextBox ID="QueryAnswerTextBox" runat="server" Text='<%# Bind("QueryAnswer") %>' />
+                <br />
+                QueryAnswered:
+                <asp:TextBox ID="QueryAnsweredTextBox" runat="server" Text='<%# Bind("QueryAnswered") %>' />
+                <br />
+                QueryBy:
+                <asp:TextBox ID="QueryByTextBox" runat="server" Text='<%# Bind("QueryBy") %>' />
+                <br />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            </InsertItemTemplate>
+            <ItemTemplate>
+                QueryId:
+                <asp:Label ID="QueryIdLabel" runat="server" Text='<%# Eval("QueryId") %>' />
+                <br />
+                QueryData:
+                <asp:Label ID="QueryDataLabel" runat="server" Text='<%# Bind("QueryData") %>' />
+                <br />
+                QueryAnswer:
+                <asp:Label ID="QueryAnswerLabel" runat="server" Text='<%# Bind("QueryAnswer") %>' />
+                <br />
+                QueryAnswered:
+                <asp:Label ID="QueryAnsweredLabel" runat="server" Text='<%# Bind("QueryAnswered") %>' />
+                <br />
+                QueryBy:
+                <asp:Label ID="QueryByLabel" runat="server" Text='<%# Bind("QueryBy") %>' />
+                <br />
                 <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
-&nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
+                &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
 &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
             </ItemTemplate>
+            <PagerStyle BackColor="#336666" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="White" ForeColor="#333333" />
         </asp:FormView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [AllQueries] WHERE [QueryId] = @original_QueryId AND [QueryData] = @original_QueryData AND [QueryAnswer] = @original_QueryAnswer AND [QueryAnswered] = @original_QueryAnswered AND [QueryBy] = @original_QueryBy" InsertCommand="INSERT INTO [AllQueries] ([QueryId], [QueryData], [QueryAnswer], [QueryAnswered], [QueryBy]) VALUES (@QueryId, @QueryData, @QueryAnswer, @QueryAnswered, @QueryBy)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [AllQueries] ORDER BY [QueryId]" UpdateCommand="UPDATE [AllQueries] SET [QueryData] = @QueryData, [QueryAnswer] = @QueryAnswer, [QueryAnswered] = @QueryAnswered, [QueryBy] = @QueryBy WHERE [QueryId] = @original_QueryId AND [QueryData] = @original_QueryData AND [QueryAnswer] = @original_QueryAnswer AND [QueryAnswered] = @original_QueryAnswered AND [QueryBy] = @original_QueryBy">
             <DeleteParameters>

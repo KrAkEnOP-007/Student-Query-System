@@ -10,7 +10,7 @@ namespace Student_Query_System
 {
     public partial class Login : System.Web.UI.Page
     {
-        string login = "Student";
+        static string login = "Student";
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\projects\Student Query System\App_Data\StudentQueryDB.mdf;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,6 +19,16 @@ namespace Student_Query_System
 
         protected void LoginBtn_Click(object sender, EventArgs e)
         {
+            if (userText.Text == "")
+            {
+                ErrorLoginTxt.Text = "Please Enter Username..!!";
+                return;
+            }
+            else if(PasswordTxt.Text == "")
+            {
+                ErrorLoginTxt.Text = "Please Enter Password..!!";
+                return;
+            }
  
             if (login == "Student")
             {
@@ -45,7 +55,7 @@ namespace Student_Query_System
                 conn.Close();
                 if (count == 1)
                 {
-                    Session["username"] = userText.Text;
+                    Session["username"] = "Admin";
                     Response.Redirect("AdminHome.aspx");
                 }
                 else
@@ -58,6 +68,7 @@ namespace Student_Query_System
         protected void StudentloginBtn_Click(object sender, EventArgs e)
         {
             login = "Student";
+            LoginLbl.Text = "Student Login";
         }
 
         protected void StudentRegisterBtn_Click(object sender, EventArgs e)
@@ -69,7 +80,7 @@ namespace Student_Query_System
         {
           
             login = "Admin";
-
+            LoginLbl.Text = "Admin Login";
         }
     }
 }
